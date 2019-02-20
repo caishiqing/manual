@@ -19,15 +19,17 @@
 - scipy，稀疏矩阵与部分高级线性算法库
 - tqdm，神经网络训练进度条显示
 
-## 推断模型
+### 推断模型
 
-### 神经网络
+#### 神经网络
 numpy手撕神经网络，适用于二分类、多分类，手推梯度公式，支持dropout，使用Adam优化器，可显示训练进度条。
 神经网络特性：
 * 采用迭代的方式更新参数，复杂度随数据维度线性增加，所以可以适用于高维数据；
 * 基于梯度更新的优化方式，所以对数值的尺度比较敏感，所以输入的规范化、参数的初始化、初始学习率的设置影响较大；
 * 采用min_batch的方式迭代更新，平衡GD与SGD的优劣，dropout是一种成本很低的高效正则手段，每轮迭代随机更新部分参数。
+
 运行示例：
+
 	python neural_network.py --batch 200 --epochs 10 --dropout 0.5
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
