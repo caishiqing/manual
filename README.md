@@ -33,7 +33,7 @@ numpy手撕神经网络，适用于二分类、多分类，手推梯度公式，
 	python neural_network.py --batch 200 --epochs 10 --dropout 0.5
 	
 <p align = 'center'>
-<img src = 'images/training.png' height = '256px'>
+<img src = 'images/training.png' height = '32px'>
 </p>
 
 #### 朴素贝叶斯
