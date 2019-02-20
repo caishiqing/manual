@@ -22,7 +22,7 @@
 ### 推断模型
 
 #### 神经网络
-numpy手撕神经网络，适用于二分类、多分类，手推梯度公式，支持dropout，使用Adam优化器，可显示训练进度条。
+numpy手撕神经网络，二分类使用sigmoid作为输出激活函数，多分类使用softmax作为输出激活函数，为了方便手推梯度公式，隐藏层统一使用tanh激活，支持dropout，使用Adam优化器，可显示训练进度条。
 神经网络特性：
 * 采用迭代的方式更新参数，复杂度随数据维度线性增加，所以可以适用于高维数据；
 * 基于梯度更新的优化方式，所以对数值的尺度比较敏感，所以输入的规范化、参数的初始化、初始学习率的设置影响较大；
@@ -33,11 +33,22 @@ numpy手撕神经网络，适用于二分类、多分类，手推梯度公式，
 	python neural_network.py --batch 200 --epochs 10 --dropout 0.5
 	
 <p align = 'center'>
-<img src = 'images/training.png' height = '32px'>
+<img src = 'images/training.png' height = '128px'>
 </p>
+
+#### 逻辑回归
+逻辑回归相当于没有隐藏层的神经网络，所以可以继承神经网络的大部分特性，同样使用Adam优化参数，支持dropout。
+
+运行示例：
+
+	python logistic_regression.py --epochs 50 --dropout 0.1
 
 #### 朴素贝叶斯
 实现高斯分布与多项分布两种类型，Naive Bayes实现过程较为明确，没有多少优化技巧而言，所以在性能上几乎与sklearn完全一致。
 朴素贝叶斯特点：
 * 严格的条件独立性假设，对于低维数据表现较好，对于高维数据这样的假设容易导致欠拟合与偏差；
 * 实现过程中只需要存储标签先验概率分布与似然函数，如果采用密度函数表示似然函数（如高斯分布）则记录函数参数，如果采用离散化的分布律（多项分布）则记录p(y|x)矩阵。
+
+运行示例：
+
+	python naive_bayes.py --mode gaussian
