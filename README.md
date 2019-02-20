@@ -1,11 +1,11 @@
 ## 手撕机器学习
 
-You can use the [editor on GitHub](https://github.com/caishiqing/manual/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+手撕机器学习系列模型，手推公式与numpy实现部分模型。
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+项目模型全部使用minist数据集测试验证，并与sklearn做了对比：
 
 <p align = 'center'>
-<img src = 'images/accuracy.png' height = '246px'>
+<img src = 'images/accuracy.png' height = '627px'>
 </p>
 
 ### Markdown
