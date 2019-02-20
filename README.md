@@ -4,9 +4,11 @@
 
 已实现模型全部使用minist数据集测试验证，并与sklearn做了对比：
 <p align = 'center'>
-<img src = 'images/accuracy.png' height = '512px'>
+<img src = 'images/accuracy.png' height = '450px'>
 </p>
+
 特殊说明：
+
 * 所有模型训练之前都对minist数据做了LDA压缩，为了保证特征分解过程非奇异，对数据加入了少量白噪声，所以每次训练结果都有微小差异；
 * 每种模型适用不同的数据维度，例如神经网络、逻辑回归适用于高维数据，而朴素贝叶斯和决策树适用于低维数据，所以每种模型使用的特征维度并不一定一样；
 * 同种模型在手撕实现和sklearn之间都使用相同的参数配置，只有优化过程的细节差异。
@@ -14,7 +16,7 @@
 ### Requirements
 适用于python2.7与python3.6，依赖包：
 - numpy，实现模型结构的主要库
-- scipy，实现稀疏矩阵与部分高级线性算法库
+- scipy，稀疏矩阵与部分高级线性算法库
 - tqdm，神经网络训练进度条显示
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
