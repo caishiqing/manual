@@ -62,7 +62,7 @@ numpy手撕神经网络，二分类使用sigmoid作为输出激活函数，多�
 
 运行示例：
 
-	python decision_tree --max_depth 9
+	python decision_tree.py --max_depth 9
 	
 #### 随机森林
 基于决策树实现随机森林，使用多进程并行构建森林，但是结果相比单颗决策树泛化能力没有较大提升，这也是唯一一个比sklearn差的模型，具体原因目前未知。
