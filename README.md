@@ -4,6 +4,10 @@ You can use the [editor on GitHub](https://github.com/caishiqing/manual/edit/mas
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
+<p align = 'center'>
+<img src = 'images/accuracy.png' height = '246px'>
+</p>
+
 ### Markdown
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
