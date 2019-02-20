@@ -31,33 +31,13 @@ numpy手撕神经网络，适用于二分类、多分类，手推梯度公式，
 运行示例：
 
 	python neural_network.py --batch 200 --epochs 10 --dropout 0.5
+	
+<p align = 'center'>
+<img src = 'images/training.png' height = '256px'>
+</p>
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/caishiqing/manual/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+#### 朴素贝叶斯
+实现高斯分布与多项分布两种类型，Naive Bayes实现过程较为明确，没有多少优化技巧而言，所以在性能上几乎与sklearn完全一致。
+朴素贝叶斯特点：
+* 严格的条件独立性假设，对于低维数据表现较好，对于高维数据这样的假设容易导致欠拟合与偏差；
+* 实现过程中只需要存储标签先验概率分布与似然函数，如果采用密度函数表示似然函数（如高斯分布）则记录函数参数，如果采用离散化的分布律（多项分布）则记录p(y|x)矩阵。
