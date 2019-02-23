@@ -87,12 +87,13 @@ LSSVM特性：
 	python svm.py --kernel rbf --C 0.1
 	
 #### 未完待续。。。
-
+  
+  
 ### 生成模型
 生成模型探索的是数据产生的根本因素，建模的是数据的先验分布P(x)或者联合分布P(x,y)，而并不关注因果关系。目前实现了GAN和VAE两种模型，相比而言，GAN只有一个真伪标签，监督信号相对较弱，浅层网络略显撕不动，与深度神经网络自然没法相比，图中显示的是加了点“外挂”的结果（以下会说明），而VAE将原始数据整个喂给网络，监督信号相对较强，所以实现起来相对容易，但是结果更像是不同样本的平均。
 <p align = 'center'>
-<img src = 'images/gan.png' height = '200px'>
-<img src = 'images/vae.png' height = '200px'>
+<img src = 'images/gan.png' height = '300px'>
+<img src = 'images/vae.png' height = '300px'>
 </p>
 
 #### 生成对抗网络
@@ -104,7 +105,7 @@ GAN特性与实现细节：
 * 解决方案是削弱判别器、增强生成器，降低判别器的初始学习率，同时为生成器添加一个辅助监督，即每轮迭代采样一批真实数据喂给生成器。
 
 <p align = 'center'>
-<img src = 'images/training_gan.png' height = '148px'>
+<img src = 'images/training_gan.png' height = '256px'>
 </p>
 
 #### 变分自动编码器
