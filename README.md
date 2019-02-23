@@ -96,6 +96,8 @@ LSSVM特性：
 <img src = 'images/vae.png' height = '400px'>
 </p>
 
+目前加入条件（标签）的生成版本（[CVAE](http://arxiv.org/abs/1603.01801v1)和[ACGAN](https://arxiv.org/abs/1610.09585)）还存在问题，所以只对每个数字类型单独训练一个生成模型。
+
 #### 生成对抗网络
 使用浅层网络手撕GAN，复用已实现的神经网络类型，对生成器重新手推损失函数梯度。  
 GAN特性与实现细节：
