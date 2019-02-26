@@ -188,7 +188,7 @@ class VAE(object):
                  = ▽z * 1 * h
             ▽b1 = ∂L/∂z * (∂z/∂u * ∂u/∂h + ∂z/∂sigma * ∂sigma/∂h) * ∂h/∂b1
                  = ▽z * (w2 + e*w3) * 1
-            ▽b1 = ∂L/∂z * (∂z/∂u * ∂u/∂h + ∂z/∂sigma * ∂sigma/∂h) * ∂h/∂w1
+            ▽w1 = ∂L/∂z * (∂z/∂u * ∂u/∂h + ∂z/∂sigma * ∂sigma/∂h) * ∂h/∂w1
                  = ▽z * (w2 + e*w3) * x
         此处公式不考虑batch与变量维度，具体实现时需注意维度扩展。
         """
