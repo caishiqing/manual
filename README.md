@@ -12,7 +12,7 @@
 推断模型探索的是条件因素与目标变量的因果关系，建模的是后验概率分布P(y|x)，包括参数化方法（如神经网络、逻辑回归、SVM等）以及规则统计（如树模型）等。  
 目前已实现6个推断模型，全部使用minist数据集测试验证，并与sklearn做了对比：
 
-![accuracy](images\accuracy.png)
+![accuracy](images/accuracy.png)
 
 <p align = 'center'>
 <img src = 'images/accuracy.png' height = '400px'>
