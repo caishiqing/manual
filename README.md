@@ -11,6 +11,9 @@
 ### 推断模型
 推断模型探索的是条件因素与目标变量的因果关系，建模的是后验概率分布P(y|x)，包括参数化方法（如神经网络、逻辑回归、SVM等）以及规则统计（如树模型）等。  
 目前已实现6个推断模型，全部使用minist数据集测试验证，并与sklearn做了对比：
+
+![accuracy](images\accuracy.png)
+
 <p align = 'center'>
 <img src = 'images/accuracy.png' height = '400px'>
 </p>
@@ -31,7 +34,7 @@ Neural Network特性：
 运行示例：
 
 	python neural_network.py --batch 200 --epochs 10 --dropout 0.5
-	
+
 <p align = 'center'>
 <img src = 'images/training.png' height = '128px'>
 </p>
@@ -52,7 +55,7 @@ Naive Bayes特性：
 运行示例：
 
 	python naive_bayes.py --mode gaussian
-	
+
 #### 决策树（★★）
 在连续型属性的离散化上做了优化，支持多级别量化，运用动态规划搜索属性最优量化划分，比传统决策树的二分法泛化能力略高一点，决策树的构建过程基本相同。
 Decision Tree特性：
@@ -63,7 +66,7 @@ Decision Tree特性：
 运行示例：
 
 	python decision_tree.py --max_depth 9
-	
+
 #### 随机森林（★★★）
 基于决策树实现随机森林，使用多进程并行构建森林，但是结果相比单颗决策树泛化能力没有较大提升，这也是唯一一个比sklearn差的模型，具体原因目前未知。
 Random Forest特性：
@@ -74,7 +77,7 @@ Random Forest特性：
 运行示例：
 
 	python random_forest.py --max_depth 9 --n_estimators 30 --workers 4
-	
+
 #### 支持向量机（★★★）
 实现最小二乘支持向量机（LSSVM），LSSVM的空间复杂度太高，所以对训练集进行了重采样，并且内置均衡采样进一步降低维度，同时可以平衡正负例（对于多分类的话会将每个类别单独看做一个二分类，将其它类别统一表示成负例，所以负例的比例会很高）。
 LSSVM特性：
@@ -85,10 +88,10 @@ LSSVM特性：
 运行示例：
 
 	python svm.py --kernel rbf --C 0.1
-	
+
 #### 未完待续。。。
-  
-  
+
+
 ### 生成模型
 生成模型探索的是数据产生的根本因素，建模的是数据的先验分布P(x)或者联合分布P(x,y)，而并不关注因果关系。目前实现了GAN和VAE两种模型，相比而言，GAN只有一个真伪标签，监督信号相对较弱，浅层网络略显撕不动，与深度神经网络自然没法相比，图中显示的是加了点“外挂”的结果（以下会说明），而VAE将原始数据整个喂给网络，监督信号相对较强，所以实现起来相对容易，但是结果更像是不同样本的平均。
 <p align = 'center'>
@@ -124,7 +127,7 @@ VAE特性与实现细节：
 运行示例：
 
 	python vae.py --batch 200 --epochs 3 --state_dim 16
-	
+
 ### 作者
 [@caishiqing](https://github.com/caishiqing/)(caishiqing@tom.com)  
 如有问题交流请联系作者。
